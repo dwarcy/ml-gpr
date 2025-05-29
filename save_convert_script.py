@@ -1,0 +1,38 @@
+import fitz  # PyMuPDF
+from pathlib import Path
+
+# X
+x_min = min(mygpr.profilePos)           # Tamanho min de X
+x_max = max(mygpr.profilePos)           # Tamanho max de X
+
+# Y
+t_min = min(mygpr.twtt)                 # zeroTime
+t_max = max(mygpr.twtt)                 # Max
+
+# Parâmetros do zoom
+inicio = x_min
+fim = x_max
+largura_janela = 1
+passo = 1
+
+# Loop para gerar PDFs e imagens
+i = 0
+x = inicio
+while x + largura_janela <= fim:
+    xrng = [x, x + largura_janela]
+    yrng = [t_min, t_max]
+    nome_arquivo = f"/home/renata/ml-GPR/frames/frame_{i:02d}.pdf"
+    
+    # Gera o PDF
+    # SUBSTITUIR PELO printProfile de cada ARQUIVO
+    # mygpr.printProfile(nome_arquivo, color='gray', contrast=1, yrng=[t_min, t_max], xrng=xrng, dpi=600)
+    print(f"Gerado: {nome_arquivo}")
+
+    # Converte o PDF em imagem
+    doc = fitz.open(nome_arquivo)
+    page = doc.load_page(0)
+    pix = page.get_pixmap(dpi=600)
+    pix.save(f"/home/renata/ml-GPR/frames/frame_{i:02d}.jpg")
+
+    x += passo
+    i += 1
