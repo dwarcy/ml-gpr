@@ -27,7 +27,7 @@ x = inicio
 while x + largura_janela <= fim:
     xrng = [x, x + largura_janela]
     yrng = [t_min, t_max]
-    nome_arquivo = f"/home/renata/ml-GPR/frames/frame_{i:02d}.pdf"
+    nome_arquivo = f"/home/renata/ml-GPR/frames/APP_frame_{i:02d}.pdf"
     
     # Gera o PDF
     # SUBSTITUIR PELO printProfile de cada ARQUIVO
@@ -38,7 +38,7 @@ while x + largura_janela <= fim:
     doc = fitz.open(nome_arquivo)
     page = doc.load_page(0)
     pix = page.get_pixmap(dpi=600)
-    pix.save(f"/home/renata/ml-GPR/frames/frame_{i:02d}.jpg")
+    pix.save(f"/home/renata/ml-GPR/frames/APP_frame_{i:02d}.jpg")
 
     x += passo
     i += 1
