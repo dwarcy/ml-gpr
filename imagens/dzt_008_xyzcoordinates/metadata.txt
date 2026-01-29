@@ -1,0 +1,38 @@
+METADADOS DO PROCESSAMENTO - FILE__008 P_1.DZT
+============================================================
+
+Arquivo original: /home/renata/ml-gpr/radargrama/FILE__008 P_1.DZT
+Data do processamento: 2025-12-04T23:13:27
+
+PARÂMETROS DO PERFIL (ORIGINAIS):
+  Comprimento total: 3.260 m
+  Posição inicial (X): -1.260 m
+  Posição final (X): 2.000 m
+  Número de traços: 1304
+  Deslocamento aplicado para iniciar em 0: -1.260 m
+
+PARÂMETROS DO PERFIL (AJUSTADOS - início em 0):
+  Posição inicial (X): 0.000 m
+  Posição final (X): 3.260 m
+
+PARÂMETROS DE TEMPO/PROFUNDIDADE:
+  Zero Time aplicado: 1.0 ns
+  Tempo mínimo (TWTT): 0.000 ns
+  Tempo máximo (TWTT): 11.537 ns
+  Y-range usado: 0.0 a 11.5 ns
+  Amostras por traço: 470
+  Profundidade estimada: 0.58 m (v=0.1 m/ns)
+
+CONFIGURAÇÃO DOS FRAMES:
+  Largura da janela (x-range): 1.0 m
+  Passo entre frames: 1.0 m
+  Total de frames gerados: 3
+  X inicia em: 0 m
+  Formato dos nomes: frame_XXXX_x[inicio]-[fim]m_y[ymin]-[ymax]ns
+
+LISTA DE FRAMES GERADOS (X inicia em 0):
+Frame | X-inicio (m) | X-fim (m) | Comprimento (m) | X-original-inicio | X-original-fim
+--------------------------------------------------------------------------------
+0000 |       0.000 |     1.000 |          1.000 |            -1.260 |          -0.260
+0001 |       1.000 |     2.000 |          1.000 |            -0.260 |           0.740
+0002 |       2.000 |     3.000 |          1.000 |             0.740 |           1.740

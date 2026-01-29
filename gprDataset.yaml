@@ -1,0 +1,30 @@
+# Ultralytics YOLO 🚀, AGPL-3.0 license
+# Yolov8CarDetection Dataset in YOLO format dataset https://www.kaggle.com/datasets/kylegraupe/wind-turbine-image-dataset-for-computer-vision by KYLE GRAUPE
+# Example usage: yolo train data=custom_dataset.yaml
+# parent
+# ├── ultralytics
+# └── data
+#     └── WindTurbines
+
+train: dataset/train/images
+val: dataset/val/images
+test: dataset/test/images
+
+augmentation:
+  hsv_h: 0.015  # Ajuste de matiz (HSV-Hue)
+  hsv_s: 0.7    # Ajuste de saturação (HSV-Saturation)
+  hsv_v: 0.4    # Ajuste de valor (HSV-Value)
+  degrees: 10   # Rotação aleatória (graus)
+  translate: 0.1 # Translação aleatória
+  scale: 0.5    # Escala aleatória
+  shear: 0.0    # Cisalhamento aleatório
+  flipud: 0.0   # Virada vertical (probabilidade)
+  fliplr: 0.5   # Virada horizontal (probabilidade)
+  mosaic: 1.0   # Probabilidade de usar aumento de mosaico
+  mixup: 0.0    # Probabilidade de usar mixup
+
+# Classes
+names:
+  0: armadura 
+  1: ruim
+  2: vazio
